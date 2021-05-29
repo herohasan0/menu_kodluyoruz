@@ -126,10 +126,8 @@ function createBtn(name) {
   btn.innerHTML = name;
   btn.setAttribute('data-id', name);
   btn.addEventListener('click', function (event) {
-    console.log(event.target.attributes[0].nodeValue.toString());
     let category = event.target.attributes[0].nodeValue.toString();
     let list = menu.filter((item) => item.category == category);
-    console.log(list);
     let x = list.map((item) =>
       card(item.img, item.title, item.price, item.desc)
     );
