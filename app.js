@@ -106,8 +106,8 @@ let card = function (img, title, price, desc) {
 };
 
 function listAll() {
-  let list = menu.map((item) =>
-    card(item.img, item.title, item.price, item.desc)
+  let list = menu.map(({ img, title, price, desc }) =>
+    card(img, title, price, desc)
   );
   section.innerHTML = list.join('');
 }
